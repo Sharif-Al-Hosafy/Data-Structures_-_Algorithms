@@ -1,5 +1,13 @@
-# Data-Structures_-_Algorithms
-My own implementations for various data structures 
+# Data-Structures\_-_Algorithms
 
-## Topics Coverd 
- * Recursion
+My own implementations for various data structures
+
+## Topics Coverd
+
+1- Recursion
+
+- Head Recursion
+- Tail Recursion
+- Tree Recursion
+- Indirect Recursion
+- Nested Recursion
