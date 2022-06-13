@@ -52,7 +52,6 @@ function indirectRecursionA(n) {
 }
 
 function indirectRecursionB(n) {
-  /// O(2^n)
   if (n > 0) {
     console.log(n);
     indirectRecursionA(parseInt(n / 2));
