@@ -1,4 +1,4 @@
-# Data-Structures\_-_Algorithms
+# Data-Structures & Algorithms
 
 My own implementations for various data structures and I'll add some of the interesting problems on each topic while going through
 
