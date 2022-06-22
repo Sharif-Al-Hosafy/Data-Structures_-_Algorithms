@@ -18,3 +18,7 @@ My own implementations for various data structures and I'll add some of the inte
 - Doubly linked lists
 - Circular linked lists
 - Circular doubly linked lists
+
+3- Binary Search Tree
+
+- with inorder postorder preorder traversal
