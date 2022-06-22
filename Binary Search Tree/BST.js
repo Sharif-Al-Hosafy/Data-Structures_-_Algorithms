@@ -58,13 +58,52 @@ class BST {
         return node;
       }
 
-      const temp = this.findMinNode(node, key);
-      node = temp;
+      // find minimum data in the right subtree
+      const temp = this.findMinNode(node.right);
+      node.data = temp.data;
+
+      // delete the temp value from tree
+      node.right = this.traversAndDelete(node.right, temp.data);
       return node;
     }
   }
 
-  findMinNode(node, key) {}
+  findMinNode(node) {
+    // if left of a node is null
+    // then it must be minimum node
+    if (node.left == null) return node;
+    else this.findMinNode(node.left);
+  }
+
+  inOrderTreeTraversal(node) {
+    if (node != null) {
+      this.inOrderTreeTraversal(node.left);
+      console.log(node.data);
+      this.inOrderTreeTraversal(node.right);
+    }
+  }
+
+  // tail recursion
+  preOrderTreeTraversal(node) {
+    if (node != null) {
+      console.log(node.data);
+      this.inOrderTreeTraversal(node.left);
+      this.inOrderTreeTraversal(node.right);
+    }
+  }
+
+  // head recursion
+  postOrderTreeTraversal(node) {
+    if (node != null) {
+      this.inOrderTreeTraversal(node.left);
+      this.inOrderTreeTraversal(node.right);
+      console.log(node.data);
+    }
+  }
+
+  getRootNode() {
+    return this.root;
+  }
 
   ////////////////////////////////////////////////////////////////
 }
