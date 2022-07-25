@@ -66,7 +66,22 @@ class Graph {
   }
 
   // dfs(v)
-  dfs(start) {}
+  dfs(start) {
+    let visited = {};
+    visited[start] = true;
+    let conc = "DFS";
+    let dfsRec = (node) => {
+      visited[node] = true;
+      conc = conc.concat(" -> " + node);
+      let nodesList = this.AdjList.get(node);
+      for (let key of nodesList) {
+        if (!visited[key]) dfsRec(key);
+      }
+    };
+
+    dfsRec(start);
+    console.log(conc);
+  }
 }
 
 // Using the above implemented graph class
@@ -98,4 +113,4 @@ g.addEdge("C", "F");
 // F -> E C
 //g.printGraph();
 
-g.bfs("A");
+g.dfs("A");
